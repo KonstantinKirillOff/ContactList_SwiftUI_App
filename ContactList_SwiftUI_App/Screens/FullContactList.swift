@@ -12,17 +12,16 @@ struct FullContactList: View {
     
     var body: some View {
         NavigationView {
-            //ScrollView {
-                List(personsData, id: \.phone) { person in
-                    Section(header: Text("\(person.fulName)")) {
-                        TextView(dataValue: person.phone, systemName: "phone")
-                        TextView(dataValue: person.email, systemName: "mail")
-                    }
+            List(personsData, id: \.phone) { person in
+                Section(header: Text(person.fulName).font(.headline)) {
+                    TextView(dataValue: person.phone, systemName: "phone")
+                    TextView(dataValue: person.email, systemName: "mail")
                 }
-                .listStyle(.insetGrouped)
-                .navigationTitle("Contact list")
+                .textCase(.none)
             }
-        //}
+            .listStyle(.insetGrouped)
+            .navigationTitle("Contact list")
+        }
     }
 }
 

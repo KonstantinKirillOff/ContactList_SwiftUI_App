@@ -18,8 +18,8 @@ struct PersonInfo: View {
                 .padding()
             VStack(alignment: .leading) {
                 List {
-                TextView(dataValue: personData.phone, systemName: "phone")
-                TextView(dataValue: personData.email, systemName: "mail")
+                    TextView(dataValue: personData.phone, systemName: "phone")
+                    TextView(dataValue: personData.email, systemName: "mail")
                 }
                 .listStyle(.inset)
             }

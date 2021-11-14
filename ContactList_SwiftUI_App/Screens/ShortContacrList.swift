@@ -13,7 +13,7 @@ struct ShortContacrList: View {
     var body: some View {
         NavigationView {
             List(personsData, id: \.phone) { person in
-                NavigationLink("\(person.fulName)") {
+                NavigationLink(person.fulName) {
                     PersonInfo(personData: person)
                 }
             }
